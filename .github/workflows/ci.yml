@@ -19,10 +19,10 @@ jobs:
       - name: Lint
         run: |
           selene generate-roblox-std
-          selene modules/
+          selene src/
 
       - name: Format
-        run: stylua --check modules/
+        run: stylua --check src/
 
       - name: Install dependencies
         run: wally install
@@ -63,4 +63,4 @@ jobs:
 
       - name: Analyze
         shell: bash
-        run: luau-lsp analyze --sourcemap=sourcemap.json --defs=globalTypes.d.lua --defs=testez.d.lua --ignore=**/_Index/** modules/
+        run: luau-lsp analyze --sourcemap=sourcemap.json --defs=globalTypes.d.lua --defs=testez.d.lua --ignore=**/_Index/** src/
