@@ -63,4 +63,4 @@ jobs:
 
       - name: Analyze
         shell: bash
-        run: luau-lsp analyze --sourcemap=sourcemap.json --defs=globalTypes.d.lua --defs=testez.d.lua --ignore=**/_Index/** src/
+        run: luau-lsp analyze --sourcemap=sourcemap.json --defs=globalTypes.d.lua --ignore=**/_Index/** src/
